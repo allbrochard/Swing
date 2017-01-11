@@ -166,7 +166,7 @@ public class Fenetre extends JFrame {
 	public static void setText(String text) {
 		Fenetre.text = text;
 	}
-
+//fonction split
 
 
 	class clickCalculette  implements ActionListener{
@@ -190,33 +190,28 @@ public class Fenetre extends JFrame {
 					System.out.println("plus");
 					cPlus=true;
 					operation = Integer.parseInt(lab.getText());
-					text="";
-					lab.setText(text);
-					ope+=operation;
 					
 					break;
 				case "-":
 					System.out.println("moins");
 					cMoins=true;
 					operation = Integer.parseInt(lab.getText());
-					text="";
-					lab.setText(text);
+					
 					ope-=operation;
 					break;
 				case "*":
 					System.out.println("multiplier");
 					operation = Integer.parseInt(lab.getText());
 					cFois=true;
-					text="";
-					lab.setText(text);
+					
+					
 					
 					break;
 				case "/":
 					System.out.println("diviser");
 					operation = Integer.parseInt(lab.getText());
 					cDivi=true;
-					text="";
-					lab.setText(text);
+					
 					break;
 				case "C":
 					System.out.println("Cancel");
@@ -238,7 +233,7 @@ public class Fenetre extends JFrame {
 
 			if (cPlus){
 				System.out.println("plus");
-				
+				ope+=operation;
 				cPlus=false;
 			}
 			else if(cMoins){
