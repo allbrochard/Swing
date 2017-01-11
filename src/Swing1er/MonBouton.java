@@ -9,9 +9,9 @@ public class MonBouton extends Button implements MouseListener {
 		super(label);
 		addMouseListener(this);
 	}
+	
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 

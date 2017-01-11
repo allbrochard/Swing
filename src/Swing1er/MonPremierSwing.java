@@ -6,7 +6,7 @@ public class MonPremierSwing {
 		// TODO Auto-generated method stub
 	
 	//Listen();
-	Listen();
+		FenetreClick1();
 	}
 public static void exoDessin(){
 	NewWindow win = new NewWindow();
@@ -17,5 +17,8 @@ public static void exoEvenement(){
 }
 public static void Listen(){
 	Listner lis= new Listner();
+}
+public static void FenetreClick1(){
+	FenetreClick click = new FenetreClick();
 }
 }
