@@ -5,15 +5,19 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import javax.swing.JFrame;
+import javax.swing.JMenuItem;
+import javax.swing.JPopupMenu;
 
 public class Listner extends JFrame implements MouseListener {
 //	MonBouton lol = new MonBouton("youpi");
+	JPopupMenu pop = new JPopupMenu();
 public Listner(){
 	super("Une fenetre qui traite les clics souris");
 	setSize(300,200);
 	setDefaultCloseOperation(EXIT_ON_CLOSE);
 	setVisible(true);
 	addMouseListener(this);
+	pop.add(new JMenuItem("lol"));
 //	this.add(lol);
 }
 	@Override
@@ -43,9 +47,11 @@ public Listner(){
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("tu est en place "+ x +" , " + y);
+		if(e.getButton()==MouseEvent.BUTTON3){
+			pop.show(getContentPane(),e.getX(),e.getY());
+			System.out.println("ça fonctionne");
+		}
+		
 	
 	}
 	
